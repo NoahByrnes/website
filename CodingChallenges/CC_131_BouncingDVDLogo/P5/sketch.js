@@ -22,12 +22,12 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   x = random(width);
   y = random(height);
-  xspeed = 10;
-  yspeed = 10;
-  pickColor();
+  xspeed = 15;
+  yspeed = 15;
+  changeNoahText();
 }
 
-function pickColor() {
+function changeNoahText() {
   r = random(100, 256);
   g = random(100, 256);
   b = random(100, 256);
@@ -50,7 +50,7 @@ function draw() {
   } else if (x <= 0) {
     xspeed = -xspeed;
     x = 0;
-    pickColor();
+    changeNoahText();
   }
 
   if (y + dvd.height >= height) {
@@ -60,6 +60,6 @@ function draw() {
   } else if (y <= 0) {
     yspeed = -yspeed;
     y = 0;
-    pickColor();
+    changeNoahImage();
   }
 }
